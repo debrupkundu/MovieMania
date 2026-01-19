@@ -1,3 +1,6 @@
+## Live Demo
+Check out the live version of MovieMania here: [https://moviemania-reactproject.netlify.app](https://moviemania-reactproject.netlify.app)
+
 # 🎬 MovieMania
 
 MovieMania is a React-based movie search and watchlist application powered by the OMDb API. Users can search movies, view detailed information, rate them, and maintain a persistent watched list using localStorage.
