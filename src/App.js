@@ -4,7 +4,7 @@ import StarRating from "./StarRating";
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-const KEY = "f84fc31d";
+const KEY = "38aac94e";
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -14,9 +14,10 @@ export default function App() {
   const [selectedId, setSelectedId] = useState(null);
 
   // const [watched, setWatched] = useState([]);
-  const [watched, setWatched] = useState(function () {
+  const [watched, setWatched] = useState(() => {
+    if (typeof window === "undefined") return [];
     const storedValue = localStorage.getItem("watched");
-    return JSON.parse(storedValue);
+    return storedValue ? JSON.parse(storedValue) : [];
   });
 
   function handleSelectMovie(id) {
